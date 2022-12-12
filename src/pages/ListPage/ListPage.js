@@ -7,6 +7,7 @@ class ListPage extends Component {
         return (
             <div className="list-page">
                  <h1 className="list-page__title">{this.props.location.state.title}</h1>
+                <hr></hr>
                 <ul>
                     {this.props.location.state.movies.map((item) => {
                         return (

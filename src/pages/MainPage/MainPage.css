@@ -17,3 +17,14 @@
 .main-page__favorites {
     width: 35%;   
 }
+
+.main-page
+{
+    background-color: #333;
+    color: #bdbdbd;
+}
+
+body
+{
+    background-color: #333; 
+}

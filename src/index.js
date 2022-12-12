@@ -6,7 +6,7 @@ import App from './App';
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <App style={{ background: '#333'}} />
   </BrowserRouter>,
   document.getElementById('root')
 );

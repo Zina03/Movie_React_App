@@ -5,7 +5,7 @@ const initialState =
     movies: [],
     favorites: [],
     favoriteLists: [],
-    searchedValue: 'hello',
+    searchedValue: '',
     maximalPages: 1,
     page: 1,
     url: 'http://www.omdbapi.com/',

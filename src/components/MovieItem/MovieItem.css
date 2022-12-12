@@ -1,30 +1,37 @@
 .movie-item {
     padding: 20px;
-    background-color: #FFEEDB;
+    background-color: #4d5f6d;
     display: flex;
+    border-radius: 1.5rem;
+    border: none;
 }
 
 .movie-item__poster {
-    height: 150px;
-    margin-right: 21px;
+    height: 155px;
+    margin-right: 15px;
 }
 
 .movie-item__title {
     font-weight: 500;
     font-size: 21px;
     margin-bottom: 14px;
+    color: lightseagreen;
+    text-shadow: 1px 1px 8px #000;
 }
 
 .movie-item__add-button {
     border: none;
     background-color: #496DDB;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 10px black ;
     padding: 10px 15px;
     color: #FFEEDB;
     font-size: 14px;
     transition: all 0.2s linear;
 }
-
 .movie-item__add-button:hover {
+     
+    background-color: #4d5f6d;  
     cursor: pointer;
     opacity: 0.9;
     transition: all 0.2s linear;

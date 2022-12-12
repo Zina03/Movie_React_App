@@ -28,6 +28,8 @@ class SearchBox extends Component {
             type: 'SEARCHED_TEXT_CHANGE',
             payload: e.target.value
         }) 
+
+        this.setState({searchedValue: e.target.value})
     }
 
     searchBoxSubmitHandler = (e) => {
@@ -60,7 +62,7 @@ class SearchBox extends Component {
                     <label className="search-box__form-label">
                         Искать фильм по названию:
                         <input
-                            value={this.statesearchedValue}
+                            value={this.state.searchedValue}
                             type="text"
                             className="search-box__form-input"
                             placeholder="Например, Shawshank Redemption"
@@ -76,10 +78,10 @@ class SearchBox extends Component {
                     </button>
                 </form>
 
-                <p>
-                    {store.getState().page === 1 || <button style={{ margin: '5px' }} onClick={this.PreviusPage}>Previus Page</button>}
+                <p style={{ margin: '5px' }}>
+                    {store.getState().page === 1 || <button className='previusPage' style={{ margin: '5px' }} onClick={this.PreviusPage}>Previus Page</button>}
                    
-                    {store.getState().page === this.maximalPages || <button style={{ margin: '5px' }} onClick={this.NextPage}>Next Page</button>}
+                    {store.getState().page === this.maximalPages || <button className='nextPage' style={{ margin: '5px' }} onClick={this.NextPage}>Next Page</button>}
 
                 </p>
 

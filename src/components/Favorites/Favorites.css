@@ -1,7 +1,9 @@
 .favorites {
     box-sizing: border-box;
-    border: 1px solid rgba(0, 8, 7);
+    border: none;
     padding: 30px 20px;
+    border-radius: 1.2rem;
+    background-color: rgb(31, 126, 115)
 }
 
 .favorites__name {
@@ -11,15 +13,55 @@
     padding: 5px 10px;
     border: 1px solid rgba(0, 8, 7, .5);
     margin-bottom: 24px;
+    border-radius: 0.7rem;
 }
 
 .favorites__list {
     margin-bottom: 24px;
+    
+    display: flex; 
+    justify-items: center;
+    align-items: center; 
+    flex-direction: column;
+
+}
+
+
+.favorites__list li {
+    background-color: #4d5f6d;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    width: 90%;
+    display: flex; 
+    justify-items: center;
+    align-items: center; 
+
+}
+
+.favorites__list li button { 
+    border: none;
+    font-size: 3rem;
+    background-color: #3954a5;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 10px black;
+    padding: 0.5rem 0.8rem;
+    color: #FFEEDB;
+    font-size: 14px;
+    transition: all 0.2s linear;
+}
+.favorites__list li button:hover  {
+    background-color: #4d5f6d;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: all 0.2s linear;
 }
 
 .favorites__save {
     border: none;
     background-color: #496DDB;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 10px black;
     padding: 10px 15px;
     color: #FFEEDB;
     font-size: 14px;
@@ -27,7 +69,26 @@
 }
 
 .favorites__save:hover {
+    background-color: #4d5f6d;
     cursor: pointer;
     opacity: 0.9;
     transition: all 0.2s linear;
+}
+.favorites__save:disabled {
+    background-color: #163d5b;
+    cursor: no-drop;
+    opacity: 0.9;
+    transition: all 0.2s linear;
+}
+
+.favLi
+{
+    margin: 1rem;
+    background-color: #163d5b;
+    border-radius: 0.8rem;
+    box-shadow: 1px 1px 10px black;
+ 
+    padding: 0.5rem 0.8rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }

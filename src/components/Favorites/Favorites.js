@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 class Favorites extends Component {
     state = {
-        title: 'Новый список',
+        title: '',
         favorites: []
     }
 
@@ -16,7 +16,7 @@ class Favorites extends Component {
         });
     }
 
-    handleinputTitle = (event) => {
+    handleinputTitle = (event) => { 
         this.setState({ title: event.target.value });
     }
 
@@ -37,21 +37,22 @@ class Favorites extends Component {
         return (
             <div>
                 <div className="favorites">
-                    <input value={this.state.title} onChange={this.handleinputTitle} className="favorites__name" />
+                    <input placeholder='Новый список' value={this.state.title} onChange={this.handleinputTitle} className="favorites__name" />
                     <ul className="favorites__list">
                         {this.state.favorites.map((item) => {
                             return <li>{item.Title} {item.Year}
                                 <button type="button" style={{ margin: '5px' }} onClick={() => this.deleteFilmFromFavorite(item.imdbID)} className="favorites__delete">x</button>
                             </li>;
                         })}
-                    </ul>
-                    <button type="button" className="favorites__save" onClick={this.saveFavorites} disabled={!this.state.favorites}>Сохранить список</button>
+                    </ul> 
+                    <button type="button" className="favorites__save" onClick={this.saveFavorites} disabled={!this.state.title}>Сохранить список</button>
+
                 </div>
 
                 <div style={{margin: '2rem 1rem'}} className="favorites">
                     <h1  style={{textAlign: 'center'}}>Saved Lists:</h1>
                     {store.getState().favoriteLists.map((elem) => {
-                        return <p style={{margin: '1rem', textAlign: 'center'}}><Link to={{ pathname: `list/${elem.id}`, state: elem }} >About {elem.title}</Link></p>
+                        return <p className="favLi"  style={{margin: '1rem', textAlign: 'center'}}><Link to={{ pathname: `list/${elem.id}`, state: elem }} >About {elem.title}</Link></p>
                     })}
                 </div>
             </div>
